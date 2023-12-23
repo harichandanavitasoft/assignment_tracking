@@ -1,0 +1,47 @@
+<div class=" container-fluid  admin">
+    <div class="row">
+      <nav class="navbar navbar-expand-lg navbar-light bg">
+        <h6 class="navbar-brand ps-5">Assignment Tracking System</h6>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="space"></div>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link ps-5" href="#">Profile</a>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link  ps-5" routerLink="viewfaculty">Students</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  ps-5" href="#">AddAssignments</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle ps-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  View
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" routerLink="adminlogin">Assignments</a></li>
+                  <li><a class="dropdown-item" routerLink="facultylogin">StudentAnswers</a></li>
+                  
+                </ul>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link  ps-5" href="#">Logout</a>
+            </li>
+  
+  
+          </ul>
+        </div>
+      </nav>
+    </div>
+  
+    <div class="row">
+  
+      <router-outlet></router-outlet>
+    </div>
+  
+  </div>

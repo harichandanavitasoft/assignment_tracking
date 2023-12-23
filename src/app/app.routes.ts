@@ -4,6 +4,7 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { AdminhomeComponent } from './adminhome/adminhome.component';
 import { ViewfacultyComponent } from './viewfaculty/viewfaculty.component';
 import { FacultyloginComponent } from './facultylogin/facultylogin.component';
+import { FacultyhomeComponent } from './facultyhome/facultyhome.component';
 
 export const routes: Routes = [
     {path:'',component:HomepageComponent,children:[
@@ -11,8 +12,7 @@ export const routes: Routes = [
     {path:"facultylogin",component:FacultyloginComponent}
 ]},
     {path:"adminhome",component:AdminhomeComponent ,children:[
-        {path:"viewfaculty",component:ViewfacultyComponent},
-
-    ]},
+        {path:"viewfaculty",component:ViewfacultyComponent}]},
+        {path:"facultyhome",component:FacultyhomeComponent}
     
 ];
