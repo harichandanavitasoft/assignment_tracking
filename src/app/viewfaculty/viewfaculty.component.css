@@ -1,0 +1,6 @@
+.bg{
+     background-image: linear-gradient(135deg,rgb(100, 161, 227) 0%,rgb(207, 140, 181) 100%);
+}
+label{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

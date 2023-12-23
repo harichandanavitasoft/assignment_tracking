@@ -1,0 +1,132 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end m-3">
+            <button class="btn btn-dark me-md-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Add
+                Faculty</button>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 m-auto">
+        <div class="table-responsive">
+            <table class="table table-success table-striped table-bordered" >
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Faculty</th>
+                        <th>Full Name</th>
+                        <th>Gender</th>
+                        <th>Phone No</th>
+                        <th>Emil id</th>
+                        <th>Branch</th>
+                        <th>Subject</th>
+                        <th>Year</th>
+                        <th>Designation</th>
+                        <th>Address</th>
+                        <th>Photo</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        </div>
+        </div>
+    </div>
+    <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content bg">
+                <div class="modal-header m-auto">
+                    <label>Faculty:</label>
+                    <input type="text">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row m-3">
+                            <div class="col-sm-2">
+                                <label><i class="bi bi-pencil-square"></i>Full Name:</label>
+                            </div>
+                            <div class="col-sm-4">
+                                <input type="text" class="w-100">
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Gender:</label>
+
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    male
+                                </label>
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    female
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row  m-3">
+                            <div class="col-sm-2">
+                                <label><i class="bi bi-envelope-at-fill"></i>Email Id:</label>
+                            </div>
+                            <div class="col-sm-4">
+                                <input type="text" class="w-100">
+                            </div>
+                            <div class="col-sm-2">
+                                <label><i class="bi bi-telephone-fill"></i>Mobile No:</label>
+                            </div>
+                            <div class="col-sm-4">
+                                <input type="text" class="w-100">
+                            </div>
+                        </div>
+
+                        <div class="row  m-3">
+                            <div class="col-sm-2">
+                                <label><i class="bi bi-mortarboard-fill"></i>Branch:</label>
+                            </div>
+                            <div class="col-sm-4">
+                                <input type="text" class="w-100">
+                            </div>
+                            <div class="col-sm-2">
+                                <label><i class="bi bi-book-half"></i>Subject:</label>
+                            </div>
+                            <div class="col-sm-4">
+                                <input type="text" class="w-100">
+                            </div>
+                        </div>
+                        <div class="row  m-3">
+                            <div class="col-sm-2">
+                                <label><i class="bi bi-calendar-event"></i>Year:</label>
+                            </div>
+                            <div class="col-sm-4">
+                                <input type="date" class="w-100">
+                            </div>
+                            <div class="col-sm-3">
+                                <label><i class="bi bi-award-fill"></i>Designation:</label>
+                            </div>
+                            <div class="col-sm-3">
+                                <input type="text" class="w-100">
+                            </div>
+                        </div>
+                        <div class="row  m-3">
+                            <div class="col-sm-2">
+                                <label>Address:</label>
+                            </div>
+                            <div class="col-sm-4">
+                                <textarea></textarea>
+                            </div>
+                        </div>
+                        <div clas="row">
+                            <div class="col-sm-6">
+                                <label>Image:</label>
+                                <input type="file" class="w-50">
+                            </div>
+                        </div>
+                     </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success">Update</button>
+                    <button type="button" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
