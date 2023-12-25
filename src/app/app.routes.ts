@@ -5,14 +5,18 @@ import { AdminhomeComponent } from './adminhome/adminhome.component';
 import { ViewfacultyComponent } from './viewfaculty/viewfaculty.component';
 import { FacultyloginComponent } from './facultylogin/facultylogin.component';
 import { FacultyhomeComponent } from './facultyhome/facultyhome.component';
+import { AddassignmentsComponent } from './addassignments/addassignments.component';
+import { StudentloginComponent } from './studentlogin/studentlogin.component';
 
 export const routes: Routes = [
     {path:'',component:HomepageComponent,children:[
     {path :"adminlogin",component:AdminloginComponent},
-    {path:"facultylogin",component:FacultyloginComponent}
+    {path:"facultylogin",component:FacultyloginComponent},
+    {path:"studentlogin",component:StudentloginComponent}
 ]},
     {path:"adminhome",component:AdminhomeComponent ,children:[
         {path:"viewfaculty",component:ViewfacultyComponent}]},
-        {path:"facultyhome",component:FacultyhomeComponent}
+        {path:"facultyhome",component:FacultyhomeComponent,children:[
+            {path:"addasignments",component:AddassignmentsComponent}]}
     
 ];
