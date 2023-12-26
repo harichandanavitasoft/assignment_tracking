@@ -1,12 +1,30 @@
 <div class=" container-fluid  admin">
-    <div class="row">
-      <div class="col-sm-3"></div>
-      <div class="col-sm-9"></div>
+   <div class="row bg-dark">
+    <div class="col-sm-5">
+            <img src="../../assets/images/girl.png" class="w-25">
+          </div>
+          <div class="col title pt-5">
+            <h4>Assignment Tracking System</h4>
+          </div>
+      </div>
+        <div class="row">
+         <div class="col-sm-2 p-0 m-0">
+        <div class="sidebar">
+          <a href="#home" class="p-3">Profile</a>
+          <a routerLink="addassignments"class="p-3">Students</a>
+          <a href="#contact" class="p-3">Add Assignment</a>
+          <a href="#about" class="p-3">view</a>
+          <a href="#about" class="p-3">Logout</a>
+        </div>
+      </div>
+      
+      <div class="col bg-primary">
+        
+        <router-outlet></router-outlet>
+      </div>
       
     </div>
   
-    <div class="row">
-     <router-outlet></router-outlet>
-    </div>
+   
   
   </div>

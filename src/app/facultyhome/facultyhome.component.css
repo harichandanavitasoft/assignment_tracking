@@ -1,20 +1,55 @@
+.title{
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
 /* .admin{
     background-image: url('../../assets/images/homepagebg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 600px;
-}
-.space{
-    flex: 1 1 auto;
-}
-.bg{
-    background: transparent;
-}
-h5{
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-a{
-    text-decoration: none;
-    color: black;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 } */
+.sidebar {
+    margin: 0;
+    padding: 0;
+    background-color:black;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  .sidebar a {
+    display: block;
+    color: white;   
+    text-decoration: none;
+  }
+   
+  .sidebar a.active {
+  color: white;
+  }
+  
+  .sidebar a:hover {
+    background-color: #555;
+    color: white;
+  }
+  
+  
+  
+  @media screen and (max-width: 500px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+  }
+

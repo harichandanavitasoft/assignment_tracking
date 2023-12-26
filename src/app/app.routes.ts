@@ -21,7 +21,8 @@ export const routes: Routes = [
         {path:"viewstudents",component:ViewstudentsComponent}
     ]},
         {path:"facultyhome",component:FacultyhomeComponent,children:[
-            {path:"addasignments",component:AddassignmentsComponent}]},
-    {path:"studentregister",component:StudentregistrationComponent}
+            {path:"addasignments",component:AddassignmentsComponent}, 
+            {path:"studentregister",component:StudentregistrationComponent}]},
+   
     
 ];
