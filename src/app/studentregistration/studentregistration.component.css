@@ -1,0 +1,83 @@
+.background{
+  background-image: url('../../assets/images/bookbg.png');
+  height: 590px;
+}
+@media only screen and (max-width: 600px) {
+  .background {
+    height: 700px;
+  }
+}
+.card {
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+   background: transparent;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+ .wrapper {
+     border-radius: 8px;
+    /* padding: 30px; */
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  h2 {
+    font-size: 2rem;
+        color: whitesmoke;
+  }
+  
+  .input-field {
+    position: relative;
+    border-bottom: 2px solid #ccc;
+    margin: 15px 0;
+    color: white;
+  
+  }
+  
+  .input-field label {
+    position: absolute;
+    /* top: 50%; */
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.15s ease;
+  }
+  
+  .input-field input {
+    /* width: 100%; */
+    /* height: 40px; */
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color:white
+  }
+  
+  .input-field input:focus~label,
+  .input-field input:valid~label {
+    font-size: 0.8rem;
+    top: 10px;
+    transform: translateY(-120%);
+  }
+  .wrapper a {
+    color: #efefef;
+    text-decoration: none;
+  }
+  
+  .wrapper a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  
+  

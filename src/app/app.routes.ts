@@ -7,6 +7,7 @@ import { FacultyloginComponent } from './facultylogin/facultylogin.component';
 import { FacultyhomeComponent } from './facultyhome/facultyhome.component';
 import { AddassignmentsComponent } from './addassignments/addassignments.component';
 import { StudentloginComponent } from './studentlogin/studentlogin.component';
+import { StudentregistrationComponent } from './studentregistration/studentregistration.component';
 
 export const routes: Routes = [
     {path:'',component:HomepageComponent,children:[
@@ -17,6 +18,7 @@ export const routes: Routes = [
     {path:"adminhome",component:AdminhomeComponent ,children:[
         {path:"viewfaculty",component:ViewfacultyComponent}]},
         {path:"facultyhome",component:FacultyhomeComponent,children:[
-            {path:"addasignments",component:AddassignmentsComponent}]}
+            {path:"addasignments",component:AddassignmentsComponent}]},
+    {path:"studentregister",component:StudentregistrationComponent}
     
 ];
