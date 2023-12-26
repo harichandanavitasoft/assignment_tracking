@@ -22,7 +22,9 @@ export const routes: Routes = [
     ]},
         {path:"facultyhome",component:FacultyhomeComponent,children:[
             {path:"addasignments",component:AddassignmentsComponent}, 
-            {path:"studentregister",component:StudentregistrationComponent}]},
+            {path:"studentregister",component:StudentregistrationComponent},
+            {path:"viewstudents",component:ViewstudentsComponent}
+        ]},
    
     
 ];

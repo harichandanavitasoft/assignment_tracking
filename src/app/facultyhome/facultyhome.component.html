@@ -11,14 +11,22 @@
          <div class="col-sm-2 p-0 m-0">
         <div class="sidebar">
           <a href="#home" class="p-3">Profile</a>
-          <a routerLink="addassignments"class="p-3">Students</a>
-          <a href="#contact" class="p-3">Add Assignment</a>
-          <a href="#about" class="p-3">view</a>
+          <a routerLink="viewstudents"class="p-3">Students</a>
+          <a  class="p-3" routerLink="addasignments">Add Assignment</a>
+         
+          <a class="nav-link dropdown-toggle p-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            view
+          </a>
+          <ul class="dropdown-menu bg-dark">
+            <li><a class="dropdown-item" href="#">Assignment</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            
+          </ul>
           <a href="#about" class="p-3">Logout</a>
         </div>
       </div>
       
-      <div class="col bg-primary">
+      <div class="col ">
         
         <router-outlet></router-outlet>
       </div>
