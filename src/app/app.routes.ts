@@ -11,6 +11,7 @@ import { StudentregistrationComponent } from './studentregistration/studentregis
 import { ViewstudentsComponent } from './viewstudents/viewstudents.component';
 import { AssignmentsComponent } from './assignments/assignments.component';
 import { StudentanswersComponent } from './studentanswers/studentanswers.component';
+import { MarksComponent } from './marks/marks.component';
 
 export const routes: Routes = [
     {path:'',component:HomepageComponent,children:[
@@ -28,6 +29,7 @@ export const routes: Routes = [
             {path:"viewstudents",component:ViewstudentsComponent},
             {path:"assignments",component:AssignmentsComponent},
             {path:"answers",component:StudentanswersComponent},
+            {path:"marks",component:MarksComponent},
         ]},
    
     
