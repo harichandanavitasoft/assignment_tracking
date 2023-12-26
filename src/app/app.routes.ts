@@ -9,6 +9,8 @@ import { AddassignmentsComponent } from './addassignments/addassignments.compone
 import { StudentloginComponent } from './studentlogin/studentlogin.component';
 import { StudentregistrationComponent } from './studentregistration/studentregistration.component';
 import { ViewstudentsComponent } from './viewstudents/viewstudents.component';
+import { AssignmentsComponent } from './assignments/assignments.component';
+import { StudentanswersComponent } from './studentanswers/studentanswers.component';
 
 export const routes: Routes = [
     {path:'',component:HomepageComponent,children:[
@@ -23,7 +25,9 @@ export const routes: Routes = [
         {path:"facultyhome",component:FacultyhomeComponent,children:[
             {path:"addasignments",component:AddassignmentsComponent}, 
             {path:"studentregister",component:StudentregistrationComponent},
-            {path:"viewstudents",component:ViewstudentsComponent}
+            {path:"viewstudents",component:ViewstudentsComponent},
+            {path:"assignments",component:AssignmentsComponent},
+            {path:"answers",component:StudentanswersComponent},
         ]},
    
     
