@@ -15,13 +15,16 @@ import { MarksComponent } from './marks/marks.component';
 import { StudenthomeComponent } from './studenthome/studenthome.component';
 import { MarksListComponent } from './marks-list/marks-list.component';
 import { TestComponent } from './test/test.component';
+import { LandingComponent } from './landing/landing.component';
 
 export const routes: Routes = [
-    {path:'',component:HomepageComponent,children:[
+    {path:'',component:HomepageComponent, children:[
+    {path :"",component:LandingComponent},
     {path :"adminlogin",component:AdminloginComponent},
     {path:"facultylogin",component:FacultyloginComponent},
-    {path:"studentlogin",component:StudentloginComponent}
-]},
+    {path:"studentlogin",component:StudentloginComponent}]},
+
+      
     {path:"adminhome",component:AdminhomeComponent ,children:[
         {path:"viewfaculty",component:ViewfacultyComponent},
         {path:"viewstudents",component:ViewstudentsComponent}
