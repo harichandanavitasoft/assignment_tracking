@@ -12,6 +12,9 @@ import { ViewstudentsComponent } from './viewstudents/viewstudents.component';
 import { AssignmentsComponent } from './assignments/assignments.component';
 import { StudentanswersComponent } from './studentanswers/studentanswers.component';
 import { MarksComponent } from './marks/marks.component';
+import { StudenthomeComponent } from './studenthome/studenthome.component';
+import { MarksListComponent } from './marks-list/marks-list.component';
+import { TestComponent } from './test/test.component';
 
 export const routes: Routes = [
     {path:'',component:HomepageComponent,children:[
@@ -25,12 +28,17 @@ export const routes: Routes = [
     ]},
         {path:"facultyhome",component:FacultyhomeComponent,children:[
             {path:"addasignments",component:AddassignmentsComponent}, 
-            {path:"studentregister",component:StudentregistrationComponent},
+           
             {path:"viewstudents",component:ViewstudentsComponent},
             {path:"assignments",component:AssignmentsComponent},
             {path:"answers",component:StudentanswersComponent},
             {path:"marks",component:MarksComponent},
         ]},
+        {path:"studenthome",component:StudenthomeComponent,children:[
+            {path:"markslist",component:MarksListComponent},
+            {path:"test",component:TestComponent}
+
+        ]},
    
-    
+        {path:"studentregister",component:StudentregistrationComponent}
 ];

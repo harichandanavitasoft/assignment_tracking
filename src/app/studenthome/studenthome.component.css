@@ -3,6 +3,7 @@
   background-color: whitesmoke;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 .sidebar {
     margin: 0;
     padding: 0;
@@ -11,6 +12,7 @@
     height: 100%;
     overflow: auto;
   }
+ 
   
   .sidebar a {
     display: block;
