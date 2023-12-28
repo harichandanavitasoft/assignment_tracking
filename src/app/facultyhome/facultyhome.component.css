@@ -3,25 +3,31 @@
   background-color: whitesmoke;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.content{
+  background-color:#e7e7e7;
+  height: 593px
+}
 .sidebar {
     margin: 0;
     padding: 0;
-    background-color:whitesmoke;
+    /* background-color:black; */
     position: fixed;
     height: 100%;
     overflow: auto;
+    width: 215px;
   }
-  
+  .icons{
+    font-size:xx-large;
+  }
+  text{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
   .sidebar a {
     display: block;
-    color: black;   
+    
+    color:aliceblue;
     text-decoration: none;
   }
-   
-  .sidebar a.active {
-  color: white;
-  }
-  
   .sidebar a:hover {
     background-color: #555;
     color: white;
