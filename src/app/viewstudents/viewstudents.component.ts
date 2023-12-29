@@ -10,5 +10,6 @@ import { RouterLink,RouterOutlet } from '@angular/router';
   styleUrl: './viewstudents.component.css'
 })
 export class ViewstudentsComponent {
+ 
 
 }

@@ -6,19 +6,29 @@
 .content{
   background-color:#e7e7e7;
   height: 593px
+  
+}
+.dropdown-item:hover{
+  background-color:transparent;
+  color:blue;
+}
+.space{
+  flex: 1 1 auto;
+}
+.bg{
+  background: transparent;
 }
 .sidebar {
     margin: 0;
     padding: 0;
-    /* background-color:black; */
     position: fixed;
     height: 100%;
     overflow: auto;
     width: 215px;
   }
-  .icons{
+  /* .icons{
     font-size:xx-large;
-  }
+  } */
   text{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
@@ -32,7 +42,9 @@
     background-color: #555;
     color: white;
   }
-  
+  .name{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
   
   
   @media screen and (max-width: 500px) {

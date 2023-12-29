@@ -10,5 +10,9 @@ import { RouterLink,RouterOutlet } from '@angular/router';
   styleUrl: './studenthome.component.css'
 })
 export class StudenthomeComponent {
+  status: boolean = false;
+  clickEvent(){
+      this.status = !this.status;       
+  }
 
 }
