@@ -1,68 +1,37 @@
+<div class=" container-fluid page">
+  <div class="row header ">
+    <div class="col-sm-2 p-0 m-0 bg-dark shadow">
+      <div class="sidebar">
+        <img src="../../assets/images/girl.png" class="img-fluid w-50">
+         <a routerLink="studentprofile" class="p-4"><i class="bi bi-mortarboard-fill"></i>Profile</a>
+        <a class="p-4" routerLink="test"><i class="bi bi-card-checklist"></i>Test</a>
+        <a routerLink="markslist" class="p-4"><i class="bi bi-mortarboard-fill"></i>Marks List</a>
+        <a class="p-4" routerLink=""><i class="bi bi-card-checklist"></i>LogOut</a>
+        </div>
+       </div>
+    <div class="col-sm-10 content">
+      <div class="row shadow">
+        <div class="col-sm-8 mt-4">
+          <h5 class="text mt-2">Assignment Tracking System</h5>
+        </div>
+        <div class="col-sm-2  mt-4 ps-5">
+          <i class="bi bi-power" routerLink="homepage">Logout</i>
+        </div>
+        <div class="col-sm-2">
+          <div class="text-center">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="../../assets/images/girl.png" class="" width="50%" height="50px"> <br>Harichandana</a>
+            <ul class="dropdown-menu bg">
+              <li><a class="dropdown-item" routerLink="facultyprofile">Profile</a></li>
+              <li><a class="dropdown-item" routerLink="">Edit</a></li>
+              <li><a class="dropdown-item" routerLink="">Delete</a></li>
 
-<div class="d-flex" id="wrapper">
-
-
-  <div class="bg-dark border-right w-25" id="sidebar-wrapper" [ngClass]="status ? 'hide' : 'show'">
-    
-    <div class="sidebar-heading"><img src="../../assets/images/girl.png" class="w-50" ></div>
-    <div class="list-group list-group-flush ">
-      <a class="list-group-item list-group-item-action bg-dark">Profile</a>
-      <a  class="list-group-item list-group-item-action bg-dark"><i class="bi bi-pencil-square"></i>Test</a>
-      <a class="list-group-item list-group-item-action bg-dark"><i class="bi bi-card-checklist"></i>Marks List</a>
-      <a  class="list-group-item list-group-item-action bg-dark"><i class="bi bi-power"></i>LogOut</a>
-      
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row p-5 view">
+        <router-outlet></router-outlet>
+      </div>
     </div>
   </div>
-  <!-- /#sidebar-wrapper -->
-
-  <!-- Page Content -->
-
-  <div id="page-content-wrapper">
-
-    
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-      <div class="container-fluid">
-        <button class="btn btn-primary" (click)="clickEvent()"><i class="bi bi-list"></i></button>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <h4 class="title ms-5">Assignment Tracking System</h4>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </li>
-            </ul> -->
-            <!-- <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="button">Search</button>
-            </form> -->
-          </div>
-      </div>
-    </nav>
-
-
-  </div>
-  <!-- /#page-content-wrapper -->
-
-</div>
-<!-- /#wrapper -->

@@ -1,68 +1,73 @@
-
- body {
-  overflow-x: hidden;
-}
-
-#sidebar-wrapper {
-  min-height: 100vh;
-  
-  -webkit-transition: margin .25s ease-out;
-  -moz-transition: margin .25s ease-out;
-  -o-transition: margin .25s ease-out;
-  transition: margin .25s ease-out;
-}
-
-#sidebar-wrapper .sidebar-heading {
-  padding: 0.875rem 1.25rem;
-  font-size: 1.2rem;
-  color: white;
+@media only screen and (max-width: 600px) {
+  .content{
+    height: 900%;
   }
-  .title{
-    color: black;
+}
+
+
+
+.header{
+  color: black;
+  background-color: whitesmoke;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.content{
+  background-color:#e7e7e7;
+  height: 800px;
+}
+.dropdown-item:hover{
+  background-color:transparent;
+  color:blue;
+}
+.space{
+  flex: 1 1 auto;
+}
+.bg{
+  background: transparent;
+}
+.sidebar {
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    width: 215px;
+  }
+  /* .icons{
+    font-size:xx-large;
+  } */
+  text{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
-a{
-  color: white;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-a:hover{
-  color: white;
-}
-
-#page-content-wrapper {
-  min-width: 100vw;
-  color: white;
-}
-
-#wrapper.toggled #sidebar-wrapper {
-  margin-left: 0;
-}
-
-@media (min-width: 768px) {
-  #sidebar-wrapper {
-    margin-left: 0;
+  .sidebar a {
+    display: block;
+    
+    color:aliceblue;
+    text-decoration: none;
   }
-
-  #page-content-wrapper {
-    min-width: 0;
-    width: 100%;
+  .sidebar a:hover {
+    background-color: #555;
+    color: white;
   }
-  .show
-  {
-    margin-left: 0!important;
+  .name{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
-  .hide
-  {
-    margin-left: -15rem!important;
+  
+  
+  @media screen and (max-width: 500px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
   }
-}
-@media (max-width: 767px) {
-  .show
-  {
-    margin-left: -15rem!important;
+  
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
   }
-  .hide
-  {
-    margin-left: -0!important;
-  }
-}
+ 

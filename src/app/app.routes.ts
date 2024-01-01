@@ -17,6 +17,7 @@ import { MarksListComponent } from './marks-list/marks-list.component';
 import { TestComponent } from './test/test.component';
 import { LandingComponent } from './landing/landing.component';
 import { FacultyprofileComponent } from './facultyprofile/facultyprofile.component';
+import { StudentprofileComponent } from './studentprofile/studentprofile.component';
 
 export const routes: Routes = [
     {path:'',component:HomepageComponent, children:[
@@ -41,7 +42,9 @@ export const routes: Routes = [
         {path:"studenthome",component:StudenthomeComponent,children:[
             {path:"markslist",component:MarksListComponent},
             {path:"test",component:TestComponent},
-            {path:"profile",component:ViewstudentsComponent}
+            {path:"studentprofile",component:StudentprofileComponent},
+            
+           
 
         ]},
    

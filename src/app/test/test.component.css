@@ -1,4 +1,4 @@
-.did-floating-label-content { 
+/* .did-floating-label-content { 
     position:relative; 
     margin-bottom:20px; 
   }
@@ -38,4 +38,68 @@
   .did-floating-input:not(:placeholder-shown) ~ .did-floating-label {
     top:-8px;
     font-size:13px;
+  } */
+  .title{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: xx-large;
   }
+  .info{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+   .wrapper {
+       border-radius: 8px;
+      /* padding: 30px; */
+      text-align: center;
+       border: 1px solid rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(9px);
+      -webkit-backdrop-filter: blur(9px);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+   .input-field {
+      position: relative;
+      border-bottom: 1px solid #ccc;
+      margin: 15px 0;
+      color: white;
+    
+    }
+    
+    .input-field label {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      font-size: 14px;
+      pointer-events: none;
+      transition: 0.15s ease;
+      color: black;
+    }
+    
+    .input-field input {
+      /* width: 100%; */
+      /* height: 40px; */
+      background: transparent;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      color:black
+    }
+    
+    .input-field input:focus~label,
+    .input-field input:valid~label {
+      font-size: 0.8rem;
+      top: 10px;
+      transform: translateY(-120%);
+    }
+    .wrapper a {
+      color: #efefef;
+      text-decoration: none;
+    }
+    
+    .wrapper a:hover {
+      text-decoration: underline;
+    }
+  
