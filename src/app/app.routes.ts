@@ -18,6 +18,8 @@ import { TestComponent } from './test/test.component';
 import { LandingComponent } from './landing/landing.component';
 import { FacultyprofileComponent } from './facultyprofile/facultyprofile.component';
 import { StudentprofileComponent } from './studentprofile/studentprofile.component';
+import { AdminhomelandingComponent } from './adminhomelanding/adminhomelanding.component';
+import { StudenthomelandigComponent } from './studenthomelandig/studenthomelandig.component';
 
 export const routes: Routes = [
     {path:'',component:HomepageComponent, children:[
@@ -28,6 +30,7 @@ export const routes: Routes = [
 
       
     {path:"adminhome",component:AdminhomeComponent ,children:[
+        {path:"",component:AdminhomelandingComponent},
         {path:"viewfaculty",component:ViewfacultyComponent},
         {path:"viewstudents",component:ViewstudentsComponent}
     ]},
@@ -40,6 +43,7 @@ export const routes: Routes = [
             {path:"marks",component:MarksComponent},
         ]},
         {path:"studenthome",component:StudenthomeComponent,children:[
+            {path:"",component:StudenthomelandigComponent},
             {path:"markslist",component:MarksListComponent},
             {path:"test",component:TestComponent},
             {path:"studentprofile",component:StudentprofileComponent},

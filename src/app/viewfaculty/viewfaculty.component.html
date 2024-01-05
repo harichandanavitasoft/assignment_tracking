@@ -5,128 +5,183 @@
                 Faculty</button>
         </div>
         <div class="row">
-            <div class="col-sm-12 m-auto">
-        <div class="table-responsive">
-            <table class="table table-success table-striped table-bordered" >
-                <thead>
-                    <tr>
-                        <th>S.No</th>
-                        <th>Faculty</th>
-                        <th>Full Name</th>
-                        <th>Gender</th>
-                        <th>Phone No</th>
-                        <th>Emil id</th>
-                        <th>Branch</th>
-                        <th>Subject</th>
-                        <th>Year</th>
-                        <th>Designation</th>
-                        <th>Address</th>
-                        <th>Photo</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
+            <div class="col-sm-5" *ngFor="let f of facultydata">
+                <div class="card bgm shadow " >
+               <div class="row">
+                <div class="col-sm-4 m-auto">
+                    <div class=" bg1">
+                        <img src="{{f.image}}" class="card-img-top rounded-circle" alt="..."></div>
+                        <div class="d-flex pt-3">
+                            <i class="bi bi-pencil-square ps-5 "></i>
+                            <i class="bi bi-trash3-fill ps-2"></i>
+                            <i class="bi bi-download ps-2"></i>
+
+                        </div>
+                    </div>
+               <div class="col-sm-7">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <h4 class="fn mb-0">{{f.fullname}}</h4>
+                        <hr>
+                    </div>
+
+                    <div class="row ">
+                        <div class="col-sm-4">
+                            <p> Faculty Id:</p>
+                        </div>
+                        <div class="col-sm-8">
+                            <p>{{f.facultyid}}</p>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-sm-4">
+                            <p>Subject:</p>
+                        </div>
+                        <div class="col-sm-8">
+                            <p>{{f.subject}}</p>
+                        </div>
+                    </div>
+                
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <p>Branch:</p>
+                        </div>
+                        <div class="col-sm-8">
+                            <p>{{f.branch}}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <p>Gender:</p>
+                        </div>
+                        <div class="col-sm-8">
+                            <p>{{f.gender}}</p>
+                        </div>
+                    </div>
+                   
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <p>Mbl no:</p>
+                        </div>
+                        <div class="col-sm-8">
+                            <p>{{f.mobileno}}</p>
+                        </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <p>Email:</p>
+                            </div>
+                            <div class="col-sm-8">
+                                <p>{{f.email}}</p>
+                            </div>
+                            </div>
+                    
+                   
+                </div>
+
+                </div>
+               
+            </div>
+           
         </div>
-        </div>
-        </div>
+
     </div>
-    <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content bg">
+</div>
+<div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content bg">
+            <form [formGroup]="Facultyform">
                 <div class="modal-header m-auto">
                     <label>Faculty Id:</label>
                     <input type="text">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" formControlName="facultyid"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
-                        <div class="row m-3">
-                            <div class="col-sm-2">
-                                <label><i class="bi bi-pencil-square"></i>Full Name:</label>
-                            </div>
-                            <div class="col-sm-4">
-                                <input type="text" class="w-100">
-                            </div>
-                            <div class="col-sm-6">
-                                <label>Gender:</label>
 
-                                <input class="form-check-input ms-3" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault1">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    male
-                                </label>
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault2" checked>
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    female
-                                </label>
-                            </div>
+                    <div class="row m-3">
+                        <div class="col-sm-2">
+                            <label><i class="bi bi-pencil-square"></i>Full Name:</label>
                         </div>
-                        <div class="row  m-3">
-                            <div class="col-sm-2">
-                                <label><i class="bi bi-envelope-at-fill"></i>Email Id:</label>
-                            </div>
-                            <div class="col-sm-4">
-                                <input type="text" class="w-100">
-                            </div>
-                            <div class="col-sm-2">
-                                <label><i class="bi bi-telephone-fill"></i>Mobile No:</label>
-                            </div>
-                            <div class="col-sm-4">
-                                <input type="text" class="w-100">
-                            </div>
+                        <div class="col-sm-4">
+                            <input type="text" class="w-100" formControlName="fullname">
                         </div>
+                        <div class="col-sm-6">
+                            <label>Gender:</label>
 
-                        <div class="row  m-3">
-                            <div class="col-sm-2">
-                                <label><i class="bi bi-mortarboard-fill"></i>Branch:</label>
-                            </div>
-                            <div class="col-sm-4">
-                                <input type="text" class="w-100">
-                            </div>
-                            <div class="col-sm-2">
-                                <label><i class="bi bi-book-half"></i>Subject:</label>
-                            </div>
-                            <div class="col-sm-4">
-                                <input type="text" class="w-100">
-                            </div>
+
+                            <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="male"
+                                formControlName="gender">
+                            <label class="form-check-label" for="inlineRadio1">male</label>
+
+                            <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="female"
+                                formControlName="gender">
+                            <label class="form-check-label" for="inlineRadio2">female</label>
                         </div>
-                        <div class="row  m-3">
-                            <div class="col-sm-2">
-                                <label><i class="bi bi-calendar-event"></i>Year:</label>
-                            </div>
-                            <div class="col-sm-4">
-                                <input type="date" class="w-100">
-                            </div>
-                            <div class="col-sm-3">
-                                <label><i class="bi bi-award-fill"></i>Designation:</label>
-                            </div>
-                            <div class="col-sm-3">
-                                <input type="text" class="w-100">
-                            </div>
+                    </div>
+
+                    <div class="row  m-3">
+                        <div class="col-sm-2">
+                            <label><i class="bi bi-envelope-at-fill"></i>Email Id:</label>
                         </div>
-                        <div class="row  m-3">
-                            <div class="col-sm-2">
-                                <label>Address:</label>
-                            </div>
-                            <div class="col-sm-4">
-                                <textarea></textarea>
-                            </div>
+                        <div class="col-sm-4">
+                            <input type="text" class="w-100" formControlName="email">
                         </div>
-                        <div clas="row">
-                            <div class="col-sm-6">
-                                <label>Image:</label>
-                                <input type="file" class="w-50">
-                            </div>
+                        <div class="col-sm-2">
+                            <label><i class="bi bi-telephone-fill"></i>Mobile No:</label>
                         </div>
-                     </form>
+                        <div class="col-sm-4">
+                            <input type="text" class="w-100" formControlName="mobileno">
+                        </div>
+                    </div>
+
+                    <div class="row  m-3">
+                        <div class="col-sm-2">
+                            <label><i class="bi bi-mortarboard-fill"></i>Branch:</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="text" class="w-100" formControlName="branch">
+                        </div>
+                        <div class="col-sm-2">
+                            <label><i class="bi bi-book-half"></i>Subject:</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="text" class="w-100" formControlName="subject">
+                        </div>
+                    </div>
+                    <div class="row  m-3">
+                        <div class="col-sm-2">
+                            <label><i class="bi bi-calendar-event"></i>Year:</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="date" class="w-100" formControlName="year">
+                        </div>
+                        <div class="col-sm-3">
+                            <label><i class="bi bi-award-fill"></i>Designation:</label>
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" class="w-100" formControlName="designation">
+                        </div>
+                    </div>
+                    <div class="row  m-3">
+                        <div class="col-sm-2">
+                            <label>Address:</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <textarea formControlName="address"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-7">
+                            <label>Image:</label>
+                            <input type="file" class="w-50" id="file" name="file"  (change)="selectphoto($event)"   formControlName="image">
+                        </div>
+                    <div class="col-sm-5">
+                    <button type="button" class="btn btn-success btn-sm " (click)="addfaculty()">Edit</button>
+                    <button type="button" class="btn btn-danger btn-sm ms-2">Cancel</button>
+                    </div>
+                  </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-success">Submit</button>
-                    <button type="button" class="btn btn-danger">Cancel</button>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
 </div>
