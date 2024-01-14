@@ -23,8 +23,9 @@ export class ViewfacultyComponent implements OnInit {
   constructor(private api: AdminService, private form: FormBuilder, private router: Router) { }
   ngOnInit(): void {
     this.isAddMode = true;
-    // let username = localStorage.getItem('id');
+    
     this.api.viewFaculty().subscribe((res: any) => {
+      
       this.facultydata = res;
     })
     const password = Math.floor(Math.random() * 1000655 + 2);

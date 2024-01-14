@@ -49,7 +49,7 @@
         </div>
         <div class="col-sm-5">
   
-          <form   class=" ms-1  p-3 rounded ">
+          <form   class=" ms-1  p-3 rounded " [formGroup]="Assignemntform">
   
             <!-- <div class="input-group  p-4">
               <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-fill"></i></span>
@@ -71,20 +71,20 @@
       </div>
       <div class ="row m-4">
         <div class="input-field m-4">
-          <input type="text" required>
+          <input type="text" formControlName="question" required >
           <label>Question: </label>
         </div>
       </div>
       <div class ="row m-4">
         <div class="input-field m-4">
          
-          <input type="text" required>
+          <input type="text" formControlName="answer" required>
           <label>Answer: </label>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-3  m-auto mb-3">
-        <button type="button" class="btn btn-dark">Dark</button></div>
+        <button type="button" class="btn btn-success" (click)="addassignment()">Add</button></div>
       </div>
       
    

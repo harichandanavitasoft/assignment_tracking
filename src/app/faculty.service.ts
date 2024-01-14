@@ -10,4 +10,10 @@ export class FacultyService {
   facultyLogin(data:any){
     return this.http.post("http://localhost:5000/faculty/login",data)
   }
+  facultyProfile(id:any){
+    return this.http.get("http://localhost:5000/facultyid/"+id)
+  }
+  Addassignment(data:any){
+    return this.http.post("http://localhost:5000/addassignment",data)
+  }
 }
