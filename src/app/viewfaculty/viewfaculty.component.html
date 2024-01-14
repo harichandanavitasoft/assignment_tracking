@@ -11,10 +11,11 @@
                 <div class="col-sm-4 m-auto">
                     <div class=" bg1">
                         <img src="{{f.image}}" class="card-img-top rounded-circle" alt="..."></div>
+                        <hr>
                         <div class="d-flex pt-3">
-                            <i class="bi bi-pencil-square ps-5 "></i>
-                            <i class="bi bi-trash3-fill ps-2"></i>
-                            <i class="bi bi-download ps-2"></i>
+                            <i class="bi bi-pencil-square ps-3" data-bs-toggle="modal" data-bs-target="#exampleModal"(click)="editfaculty(f)"></i>
+                            <i class="bi bi-trash3-fill ps-4" (click)="deletefaculty(f._id)" ></i>
+                            <i class="bi bi-download ps-4"></i>
 
                         </div>
                     </div>
@@ -75,9 +76,7 @@
                                 <p>{{f.email}}</p>
                             </div>
                             </div>
-                    
-                   
-                </div>
+                    </div>
 
                 </div>
                
@@ -90,11 +89,11 @@
 <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content bg">
-            <form [formGroup]="Facultyform">
+            <form [formGroup]="Facultyform" (ngSubmit)="onSubmit()">
                 <div class="modal-header m-auto">
                     <label>Faculty Id:</label>
-                    <input type="text">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" formControlName="facultyid"></button>
+                    <input type="text"  formControlName="facultyid">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
 
@@ -176,7 +175,7 @@
                             <input type="file" class="w-50" id="file" name="file"  (change)="selectphoto($event)"   formControlName="image">
                         </div>
                     <div class="col-sm-5">
-                    <button type="button" class="btn btn-success btn-sm " (click)="addfaculty()">Edit</button>
+                    <button type="submit" class="btn btn-success btn-sm ">submit</button>
                     <button type="button" class="btn btn-danger btn-sm ms-2">Cancel</button>
                     </div>
                   </div>

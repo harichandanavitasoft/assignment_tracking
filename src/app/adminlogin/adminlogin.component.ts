@@ -27,7 +27,6 @@ constructor( private api:AdminService, private form:FormBuilder,private route:Ro
   adminlogin(){
     
     this.api.adminLogin(this.AdminLoginform.value).subscribe((res:any)=>{
-      console.log(res,'adminLogin chechking')
       if(res){
         alert("Login sucessful")
       }

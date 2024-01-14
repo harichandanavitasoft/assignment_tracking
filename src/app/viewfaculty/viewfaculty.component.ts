@@ -15,24 +15,22 @@ import { Router } from '@angular/router';
 })
 export class ViewfacultyComponent implements OnInit {
   Facultyform!: FormGroup
-
+  isAddMode!: boolean;
+  loading = false;
   selectedphoto: any;
+  
   facultydata!: any;
   constructor(private api: AdminService, private form: FormBuilder, private router: Router) { }
   ngOnInit(): void {
+    this.isAddMode = true;
+    // let username = localStorage.getItem('id');
     this.api.viewFaculty().subscribe((res: any) => {
       this.facultydata = res;
-      console.log(res, 'facultydata');
-
     })
-
-
-
     const password = Math.floor(Math.random() * 1000655 + 2);
-    console.log(password);
-
     this.Facultyform = this.form.group({
-      facultyid:[''],
+      id: [''],
+      facultyid: [''],
       fullname: [''],
       email: [''],
       branch: [''],
@@ -55,23 +53,64 @@ export class ViewfacultyComponent implements OnInit {
 
       }
     }
-
-
-
   }
   addfaculty() {
-    // if(this.selected){
     let facultylist = {
       ...this.Facultyform.value,
       image: this.selectedphoto
     }
     this.api.addFaculty(facultylist).subscribe((res: any) => {
       window.location.reload();
-      console.log(res, 'faculty chechking')
+    })
+  }
+  deletefaculty(id: any) {
+
+    this.api.Deletefaculty(id).subscribe((res: any) => {
+      window.location.reload();
+
+    })
+  }
+  onSubmit() {
+
+    if (this.isAddMode) {
+      this. addfaculty() ;
+    } else {
+      this.updateUser();
+    }
+  }
+private updateUser() {
+    this.api.Editfaculty(this.Facultyform.value).subscribe((res:any)=>{
+      window.location.reload();
     })
 
+      
+        
   }
 
 
+
+
+  editfaculty(d:any){
+  this.isAddMode = false;
+  this.Facultyform.patchValue({
+    id:d._id,
+    facultyid:d.facultyid,
+    fullname:d.fullname,
+    email: d.email,
+    branch: d.branch,
+    year: d.year,
+    address:d.address,
+    gender:d.gender,
+    mobileno: d.mobileno,
+    subject: d.subject,
+    designation: d.designation,
+    image: d.image,
+
+  })
+
+
+
+
+}
 
 }
