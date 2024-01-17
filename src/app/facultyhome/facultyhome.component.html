@@ -1,11 +1,13 @@
 <div class=" container-fluid">
   <div class="row header ">
-    <div class="col-sm-2 p-0 m-0 bg-dark shadow">
+    <div class="col-sm-2 p-0 m-0 g-0 bg-dark shadow">
       <div class="sidebar">
-        <img src={{data.image}} class="img-fluid w-50">
-
-
-        <a routerLink="viewstudents" class="p-4"><i class="bi bi-mortarboard-fill"></i>Students</a>
+       
+        <img src={{data.image}} class="img-fluid w-25 rounded-circle me-1 Profile">{{data.fullname}}
+        <hr style="color:orangered;">
+       
+       
+     <a routerLink="viewstudents" class="p-4"><i class="bi bi-mortarboard-fill"></i>Students</a>
         <a class="p-4" routerLink="addasignments"><i class="bi bi-card-checklist"></i>Add Assignment</a>
         <a class="nav-link dropdown-toggle p-4" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           <i class="bi bi-eye-fill"></i> view</a>
@@ -18,22 +20,25 @@
       </div>
     </div>
     <div class="col-sm-10 content">
-      <div class="row shadow">
+      <div class="row headbar">
         <div class="col-sm-8 mt-4">
           <h5 class="text mt-2">Assignment Tracking System</h5>
         </div>
-        <div class="col-sm-2  mt-4 ps-5">
-          <i class="bi bi-power" routerLink="">Logout</i>
+        <div class="col-sm-2 icon mt-3 ps-5">
+          <i class="bi bi-bell-fill me-3"></i>
+          <i class="bi bi-envelope-at-fill " ></i>
         </div>
-        <div class="col-sm-2">
-          <div class="text-center">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <img src={{data.image}} class="" width="50%" height="50px"> <br>{{data.fullname}}</a>
+       
+        <div class="col-sm-2 profile">
+          <div class="text-center d-flex">
+            <!-- <img src={{data.image}} class="rounded-circle" width="50%" height="50px"> -->
+            <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src={{data.image}} class="rounded-circle" width="40%" height="50px"> {{data.fullname}}</a>
             <ul class="dropdown-menu bg">
               <li><a class="dropdown-item" routerLink="facultyprofile">Profile</a></li>
               <li><a class="dropdown-item" routerLink="">Edit</a></li>
-              <li><a class="dropdown-item" routerLink="">Delete</a></li>
-
+            <li><p>Logout<i class="bi bi-box-arrow-right" routerLink="facultylogin"></i></p>
+              
             </ul>
           </div>
         </div>
@@ -43,3 +48,4 @@
       </div>
     </div>
   </div>
+</div>

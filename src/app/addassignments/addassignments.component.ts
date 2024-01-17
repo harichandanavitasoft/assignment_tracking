@@ -17,8 +17,9 @@ export class AddassignmentsComponent implements OnInit {
   constructor(private api:FacultyService,private form:FormBuilder,private route:Router){}
   ngOnInit(): void {
     this.Assignemntform=this.form.group({
+      facultyid:[''],
       question:[''],
-      answer:['']
+      subject:['']
     })
 
     

@@ -16,4 +16,7 @@ export class FacultyService {
   Addassignment(data:any){
     return this.http.post("http://localhost:5000/addassignment",data)
   }
+  viewassignments(){
+    return this.http.get("http://localhost:5000/assignments")
+  }
 }
