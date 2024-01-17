@@ -7,22 +7,22 @@
       </div>
       <div class="col-sm-6 ">
 
-        <form class="m-2 border shadow p-3 rounded">
+        <form class="m-2 border shadow p-3 rounded" [formGroup]="studentloginform">
 
           <div class="input-group  p-4">
             <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-fill"></i></span>
-            <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-              aria-describedby="basic-addon1">
+            <input type="text" class="form-control" placeholder="HallTicket no" aria-label="Username"
+              aria-describedby="basic-addon1" formControlName="hallticketno">
           </div>
           <div class="input-group  p-4">
             <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-fill-lock"></i></span>
             <input type="text" class="form-control" placeholder="password" aria-label="Username"
-              aria-describedby="basic-addon1">
+              aria-describedby="basic-addon1" formControlName="password"> 
               
           </div>
          
           <div class="d-flex justify-content-around align-items-center ">
-            <button type="submit" class="btn btn-primary btn-sm mt-4"  routerLink="/studenthome">Login</button>
+            <button type="submit" class="btn btn-primary btn-sm mt-4"  (click)="studentlogin()">Login</button>
           </div>
         <p class="text-center pt-3"><a href="#" class=" pw" data-bs-toggle="modal" data-bs-target="#exampleModal">Forgot password?</a></p>
           <p class="text-center">If you don't have an account <a href="" class="" routerLink="/studentregister">Signup</a></p>

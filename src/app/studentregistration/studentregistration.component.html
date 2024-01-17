@@ -6,29 +6,31 @@
           <div class="col-sm-5">
             <img src="../../assets/images/sturegistration.png" class="img-fluid" alt="Phone image">
           </div>
+          
           <div class="col-sm-7 ">
-       
+                
                 <div class="row">
                   <div class="wrapper container">
-                    <form class="m-2 shadow p-3 rounded">
+                 
                       <h2> Student Registration</h2>
+                      <form class="m-2 shadow p-3 rounded"[formGroup]="studentform">
                       <div class="row">
                         <div class="col-sm-4">
                           <div class="input-field ">
-                            <input type="text" required>
+                            <input type="text" required formControlName="hallticketno">
                             <label>HallTicket No </label>
                           </div>
                         </div>
                         <div class="col-sm-4">
-                          <div class="input-field ">
-                            <input type="text" required>
+                          <div class="input-field">
+                            <input type="text" required formControlName="fullname"> 
                             <label>FullName:</label>
                           </div>
                         </div>
   
                         <div class="col-sm-4">
                           <div class="input-field ">
-                            <input type="text" required>
+                            <input type="text" required formControlName="email">
                             <label>Email Id:</label>
                           </div>
                         </div>
@@ -36,13 +38,13 @@
                       <div class="row">
                         <div class="col-sm-4">
                           <div class="input-field">
-                            <input type="text" required>
+                            <input type="text" required  formControlName="mobileno">
                             <label>Mobile No </label>
                           </div>
                         </div>
                         <div class="col-sm-4">
                           <div class="input-field">
-                            <input type="date">
+                            <input type="date" formControlName="dateofbirth">
                             <label>Date of Birth</label>
                           </div>
                         </div>
@@ -52,11 +54,11 @@
   
                           <label for="">Gender:</label>
                           <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="male" formControlName="gender">
                             <label class="form-check-label" for="inlineRadio1">male</label>
                           </div>
                           <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                            <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="female" formControlName="gender">
                             <label class="form-check-label" for="inlineRadio2">female</label>
                           </div>
                         </div>
@@ -64,42 +66,43 @@
                       <div class="row">
                         <div class="col-sm-4">
                           <div class="input-field">
-                            <input type="text" required>
+                            <input type="text" required formControlName="branch">
                             <label>Branch</label>
                             
                           </div>
                         </div>
                         <div class="col-sm-4">
                           <div class="input-field">
-                            <input type="text" required>
+                            <input type="text" required formControlName="year">
                             <label>Year</label>
                           </div>
                         </div>
   
                         <div class="col-sm-4">
                           <div class="input-field">
-                            <input type="text" required>
+                            <input type="text" required formControlName="address">
                             <label>Address</label>
                           </div>
                         </div>
                         <div class="row">
                           <div class="col-sm-8">
-                            <div class="input-field">
-                              <input type="file">
+                            <div class="input-field" >
+                              <input type="file"  class="w-50" id="file" name="file" formControlName="image" >
                               <label>Image</label>
                             </div>
                           </div>
                         </div>
                         <div class="d-flex mb-3">
-                          <a href="#" class="btn btn-success btn-sm">Submit</a>
-                          <a href="#" class="btn btn-danger btn-sm  ms-3">Cancel</a>
-                          <a href="#" class="btn btn-primary btn-sm  ms-3">Clear</a>
+                          <a type="submit"   class="btn btn-success btn-sm" (click)="addstudent()">Submit</a>
+                          <a type="button" class="btn btn-danger btn-sm  ms-3">Cancel</a>
+                          <a type="button" class="btn btn-primary btn-sm  ms-3">Clear</a>
                         </div>
   
                       </div>
                     </form>
                   </div>
                 </div>
+                
               </div>
   
             </div>
