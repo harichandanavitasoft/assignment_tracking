@@ -14,4 +14,13 @@ export class StudentService {
   studentlogin(data:any){
     return this.http.post("http://localhost:5000/student/login",data)
   }
+  studentprofile(id:any){
+    return this.http.get("http://localhost:5000/studentprofile/"+id)
+  }
+  studenttest(data:any){
+    return this.http.post("http://localhost:5000/tests",data)
+  }
+  editstudent(data:any){
+    return this.http.put("http://localhost:5000/editfaculty/"+data.id,data)
+  }
 }

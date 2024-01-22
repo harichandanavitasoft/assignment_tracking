@@ -1,104 +1,36 @@
-<!-- <div class="card w-50">
-    <h5 class="card-header">Add Assignment</h5>
-    <div class="card-body">
-        <div class="input-field ">
-            <input type="text" required>
-            <label>Faculty Id </label>
-          </div>
-          <div class="input-field ">
-            <input type="text" required>
-            <label>Subject</label>
-          </div>
-          <div class="input-field ">
-            <input type="text" required>
-            <label>Question:</label>
-          </div>
-      <a  class="btn btn-success m-auto">Add</a>
-    </div>
-  </div> -->
-  <!-- <div class="row font">
-    <div class="col-sm-5 shadow">
-      <div class ="row ">
-        <h2 class="m-4 text-center">Add Assignment</h2>
-      </div>
-      <div class ="row m-4">
-        <div class="input-field m-4">
-          <input type="text" required>
-          <label>Question: </label>
-        </div>
-      </div>
-      <div class ="row m-4">
-        <div class="input-field m-4">
-         
-          
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-3  m-auto mb-3">
-        <button type="button" class="btn btn-dark">Dark</button></div>
-      </div>
+
       
-    </div>
-  </div> -->
   <div class="background ">
 
     <div class="container py-5 h-100">
       <div class="row d-flex align-items-center justify-content-center h-100">
-        <div class="col-sm-6">
-          <img src="../../assets/images/addassigment.png" class="img-fluid " alt="assignemnt image">
-        </div>
         <div class="col-sm-5">
+          <img src="../../assets/images/assignment.png" class="img-fluid " alt="assignemnt image">
+        </div>
+        <div class="col-sm-7">
   
-          <form   class=" ms-1  p-3 rounded " [formGroup]="Assignemntform">
-  
-            <!-- <div class="input-group  p-4">
-              <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-fill"></i></span>
-              <input type="text" class="form-control" placeholder="Username" aria-label="username"
-                aria-describedby="basic-addon1"   formControlName="username">
+          <form   class="rounded  ms-5" [formGroup]="Assignemntform">
+            <h2 class="m-4 title">Add Assignment</h2>
+            <div class="input-group w-75 mb-3">
+              <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-check"></i></span>
+              <input type="text" class="form-control" placeholder="FacultyId" aria-label="password"
+                aria-describedby="basic-addon1" formControlName="facultyid">
+                
             </div>
-            <div class="input-group  p-4">
-              <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-fill-lock"></i></span>
-              <input type="text" class="form-control" placeholder="password" aria-label="username"
-                aria-describedby="basic-addon1"  formControlName="password">
+            <div class="input-group w-75 mb-3">
+              <span class="input-group-text" id="basic-addon1"><i class="bi bi-journal-richtext"></i></span>
+              <input type="text" class="form-control" placeholder="Subject" aria-label="password"
+                aria-describedby="basic-addon1" formControlName="subject">
+                
             </div>
-            <div class="d-flex justify-content-around align-items-center ">
-              <button type="submit" class="btn btn-primary btn-sm mt-4">Login</button>
-            </div> -->
-            
-            
-      <div class ="row ">
-        <h2 class="m-4 text-center">Add Assignment</h2>
-      </div>
-      <div class ="row m-4">
-        <div class="input-field m-4">
-         
-          <input type="text" formControlName="facultyid" required>
-          <label>Facukty Id: </label>
-        </div>
-      </div>
-      <div class ="row m-4">
-        <div class="input-field m-4">
-          <input type="text" formControlName="question" required >
-          <label>Question: </label>
-        </div>
-      </div>
-      <div class ="row m-4">
-        <div class="input-field m-4">
-         
-          <input type="text" formControlName="subject" required>
-          <label>Subject: </label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-3  m-auto mb-3">
-        <button type="button" class="btn btn-success" (click)="addassignment()">Add</button></div>
-      </div>
-      
-   
-
-
+            <div>
+            <textarea  class="w-75 rounded  form-control" placeholder=" Question:" formControlName="question"></textarea>
+          </div>
             </form>
-        </div>
-      </div>
-    </div>
-  </div>
+           
+            <div align="center">
+              <button type="submit" class="btn btn-primary btn-sm mt-3 me-5" (click)="addassignment()">Login</button>
+            </div>
+            
+            
+   

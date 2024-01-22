@@ -12,9 +12,11 @@
                </tr>
            </thead>
            <tbody>
-            <td>{{info.facultyid}}</td>
-            <td>{{info.subject}}</td>
-            <td>{{info.question}}</td>
+            <tr   *ngFor="let i of info">
+            <td>{{i.facultyid}}</td>
+            <td>{{i.subject}}</td>
+            <td>{{i.question}}</td>
+            </tr>
             
            </tbody>
        </table>

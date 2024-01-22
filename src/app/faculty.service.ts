@@ -19,4 +19,10 @@ export class FacultyService {
   viewassignments(){
     return this.http.get("http://localhost:5000/assignments")
   }
+  viewanswers(){
+    return this.http.get("http://localhost:5000/gettests")
+  }
+  viewstudents(){
+    return this.http.get("http://localhost:5000/getstudents")
+  }
 }

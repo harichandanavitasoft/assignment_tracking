@@ -8,7 +8,7 @@
        <table class="table table-success table-striped table-bordered" >
            <thead>
                <tr>
-                   <th>S.No</th>
+                  
                    <th>HallTicket No</th>
                    <th>Subject</th>
                    <th>Question</th>
@@ -18,7 +18,18 @@
                    
                </tr>
            </thead>
-           <tbody></tbody>
+           <tbody>
+            <tr  *ngFor="let t of testdata">
+            <th>{{t.hallticketno}}</th>
+            <th>HallTicket No</th>
+            <th>Subject</th>
+            <th>Question</th>
+            <th>Answer</th>
+            <th>Marks</th>
+            <th>Action</th>
+        </tr>
+
+           </tbody>
        </table>
    </div>
    </div>

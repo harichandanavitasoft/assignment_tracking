@@ -6,9 +6,9 @@
             <table class="table  table-striped shadow " >
                 <thead>
                     <tr>
-                        <th>S.No</th>
-                        <th>Faculty</th>
-                        <th> Name</th>
+                       
+                        <th>Hallticketno</th>
+                        <th>FULL Name</th>
                         <th>Gender</th>
                         <th>DOB</th>
                         <th>Phone No</th>
@@ -21,34 +21,23 @@
                     </tr>
                 </thead>
                 <tbody>
-                  <tr >
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>mdo</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>mdo</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>mdo</td>
-                    <td class="w-25"><img src="../../assets/images/girl.png" class="img-fluid w-25" ></td>
+                  <tr   *ngFor="let f of data">
+                    <td>{{f.hallticketno}}</td>
+                    <td>{{f.fullname}}</td>
+                    <td>{{f.gender}}</td>
+                      <td>{{f.dateofbirth}}</td>
+                    <td>{{f.mobileno}}</td>
+                    <td>{{f.email}}</td>
+                    <td>{{f.branch}}</td>
+                    <td>{{f.year}}</td>
+                    <td>{{f.address}}</td>
+                    <td class="w-25"><img src={{f.image}} class="img-fluid w-25"></td>
                     <td><i class="bi bi-download"></i></td>
                     
                     
 
                   </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>twitter</td>
-                  </tr>
+                
                 </tbody>  
             </table>
         </div>

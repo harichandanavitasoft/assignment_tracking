@@ -20,7 +20,7 @@ export class AdminService {
     return this.http.delete("http://localhost:5000/deletefaculty/"+id)
   }
   Editfaculty(data:any){
-    console.log(data);
+    
     
     return this.http.put("http://localhost:5000/editfaculty/"+data.id,data)
   }

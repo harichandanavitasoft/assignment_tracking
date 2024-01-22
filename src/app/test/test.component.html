@@ -1,62 +1,11 @@
-<!-- <div class="card w-50">
-    <div class="card-header">
-      ASSIGN MARKS
-    </div>
-    <div class="card-body">
-        <div class="row">
-            <div class="col-sm-6">
-      <div class="did-floating-label-content">
-            <input class="did-floating-input" type="text" placeholder=" ">
-            <label class="did-floating-label">HallTicket No:</label>
-          </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="did-floating-label-content">
-                  <input class="did-floating-input" type="text" placeholder=" ">
-                  <label class="did-floating-label">FullName</label>
-                </div>
-                </div>
-          
-          </div>
-          <div class="row">
-            <div class="col-sm-6">
-      <div class="did-floating-label-content">
-            <input class="did-floating-input" type="text" placeholder=" ">
-            <label class="did-floating-label">Subject</label>
-          </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="did-floating-label-content">
-                  <input class="did-floating-input" type="text" placeholder=" ">
-                  <label class="did-floating-label">Question</label>
-                </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6">
-              <div class="did-floating-label-content">
-                    <input class="did-floating-input" type="text" placeholder=" ">
-                    <label class="did-floating-label">Answer</label>
-                  </div>
-                  </div>
-                  
-                  
-                  </div>
-          
-          </div>
-          
-          
-      <a href="#" class="btn btn-primary bg-success">Submit</a>
-    </div>
-  </div>
- -->
- 
- <div class=" row container" >
-  <div class=" col-sm-8 text-center shadow title" >Test
+<!-- <div class=" row container" >
+  <div class=" col-sm-8 text-center  title" >Test
+    <form [formGroup]="testform"> 
   <div class="row mb-2 ms-5 info">
     <div class="col-sm-9 bg-light rounded">
       
         <div class="input-field m-4 ">
-          <input type="text" class="" required>
+          <input type="text" class="" required formControlName="hallticketno">
           <label>HallTicket No: </label>
         </div>
       </div>
@@ -65,7 +14,7 @@
       <div class="col-sm-9 bg-light rounded">
         
           <div class="input-field m-4 ">
-            <input type="text" class="" required>
+            <input type="text" class="" required formControlName="fullname">
             <label>FullName: </label>
           </div>
         </div>
@@ -74,7 +23,7 @@
         <div class="col-sm-9 bg-light rounded">
           
             <div class="input-field m-4 ">
-              <input type="text" class="" required>
+              <input type="text" class="" required formControlName="subject">
               <label>Subject: </label>
             </div>
           </div>
@@ -83,7 +32,7 @@
           <div class="col-sm-9 bg-light rounded">
             
               <div class="input-field m-4 ">
-                <input type="text" class="" required>
+                <input type="text" class="" required formControlName="question">
                 <label>Question: </label>
               </div>
             </div>
@@ -92,17 +41,52 @@
             <div class="col-sm-9 bg-light rounded">
               
                 <div class="input-field m-4 ">
-                  <input type="text" class="" required>
+                  <input type="text" class="" required formControlName="answer">
                   <label>Answer: </label>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-sm-3 m-auto">
-                <button class="btn btn-success">Submit</button>
+                <button type="submit"   class="btn btn-success" (click)="submittest()">Submit</button>
               </div>
             </div>
+            </form>
            </div>
            </div>
-  
+   -->
  
+<div class="row">
+  <div class="col-sm-8 shadow form m-auto">
+  <form   class="rounded ms-5 "  [formGroup]="testform" >
+    <div class="titlerow rounded w-75">
+     <hr class="rounded">  
+    <h2 class="m-3 title">Assignment Test</h2></div>
+    <div class="input-group w-75 mb-3">
+      <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-check"></i></span>
+      <input type="text" class="form-control" placeholder="HallTicketNo" aria-label="password"
+        aria-describedby="basic-addon1" formControlName="hallticketno">
+        
+      </div>
+    <div class="input-group w-75 mb-3">
+      <span class="input-group-text" id="basic-addon1"><i class="bi bi-journal-richtext"></i></span>
+      <input type="text" class="form-control" placeholder="Subject" aria-label="password"
+        aria-describedby="basic-addon1" formControlName="subject">
+        </div>
+         <div class="input-group w-75 mb-3">
+      <span class="input-group-text" id="basic-addon1"><i class="bi bi-journal-richtext"></i></span>
+      <input type="text" class="form-control" placeholder="FullName" aria-label="password"
+        aria-describedby="basic-addon1" formControlName="fullname">
+        </div>
+    <div>
+    <textarea  class="w-75 rounded  form-control mb-3" placeholder=" Question:" formControlName="question"></textarea>
+  </div>
+  <div>
+    <textarea  class="w-75 rounded  form-control mb-3" placeholder="Answer:" formControlName="answer"></textarea>
+  </div>
+    </form>
+    <div class="mb-3" align="center">
+      <button type="button" class="btn btn-success btn-sm "  (click)="submittest()">Success</button>
+      </div>
+      </div>
+    </div>

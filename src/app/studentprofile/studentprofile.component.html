@@ -4,12 +4,13 @@
        <img src="../../assets/images/girl.png" class="w-50 ms-4">
        <h6 class="ps-5">Harichandana</h6>
        <hr>
+       <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="editprofile(data)">edit</button>
        <div class="row pt-5">
         <div class="col-sm-6">
-        <p>Designation:</p>
+        <p>Hallticketno:</p>
         </div>
         <div class="col-sm-6">
-         <p>H.O.D</p>
+         <p>{{data.hallticketno}}</p>
         </div>
        </div>
     </div>
@@ -79,3 +80,95 @@
   
   </div>
   
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog  modal-lg">
+    <div class="modal-content ">
+      <form [formGroup]="Editform">
+        <div class="modal-header m-auto">
+            <label>HallTicket no:</label>
+            <input type="text"  formControlName="hallticketno">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+            <div class="row m-3">
+                <div class="col-sm-2">
+                    <label><i class="bi bi-pencil-square"></i>Full Name:</label>
+                </div>
+                <div class="col-sm-4">
+                    <input type="text" class="w-100" formControlName="fullname">
+                </div>
+                <div class="col-sm-6">
+                    <label>Gender:</label>
+
+
+                    <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="male"
+                        formControlName="gender">
+                    <label class="form-check-label" for="inlineRadio1">male</label>
+
+                    <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="female"
+                        formControlName="gender">
+                    <label class="form-check-label" for="inlineRadio2">female</label>
+                </div>
+            </div>
+
+            <div class="row  m-3">
+                <div class="col-sm-2">
+                    <label><i class="bi bi-envelope-at-fill"></i>Email Id:</label>
+                </div>
+                <div class="col-sm-4">
+                    <input type="text" class="w-100" formControlName="email">
+                </div>
+                <div class="col-sm-2">
+                    <label><i class="bi bi-telephone-fill"></i>Mobile No:</label>
+                </div>
+                <div class="col-sm-4">
+                    <input type="text" class="w-100" formControlName="mobileno">
+                </div>
+            </div>
+
+            <div class="row  m-3">
+                <div class="col-sm-2">
+                    <label><i class="bi bi-mortarboard-fill"></i>Branch:</label>
+                </div>
+                <div class="col-sm-4">
+                    <input type="text" class="w-100" formControlName="branch">
+                </div>
+                <div class="col-sm-2">
+                  <label><i class="bi bi-calendar-event"></i>DOB:</label>
+              </div>
+              <div class="col-sm-4">
+                  <input type="date" class="w-100" formControlName="year">
+              </div>
+              
+            </div>
+            
+            <div class="row  m-3">
+                <div class="col-sm-2">
+                    <label>Address:</label>
+                </div>
+                <div class="col-sm-4">
+                    <textarea formControlName="address"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-7">
+                    <label>Image:</label>
+                    <input type="file" class="w-50" id="file" name="file"  formControlName="image">
+                </div>
+            <div class="col-sm-5">
+            <button type="submit" class="btn btn-success btn-sm " (click)=" updateprofile()">submit</button>
+            <button type="button" class="btn btn-danger btn-sm ms-2">Cancel</button>
+            </div>
+          </div>
+        </div>
+    </form>
+         </div>
+      
+    
+    </div>
+  </div>
+
+ 

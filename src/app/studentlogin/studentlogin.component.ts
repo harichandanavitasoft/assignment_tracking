@@ -27,6 +27,7 @@ export class StudentloginComponent implements OnInit {
   studentlogin(){
     this.api.studentlogin(this.studentloginform.value).subscribe((res:any)=>{
       console.log(res);
+      localStorage.setItem("id",res._id)
       if(res){
         alert("Login sucessful")
       }

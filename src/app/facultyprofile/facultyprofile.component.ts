@@ -19,8 +19,13 @@ export class FacultyprofileComponent implements OnInit {
   constructor(private api:FacultyService, private edit: AdminService,  private form:FormBuilder){}
   ngOnInit(): void {
     let id=localStorage.getItem("id");
+    console.log(id);
+    
     this.api.facultyProfile(id).subscribe((res:any)=>{
+    
+      
       this.data= res;
+      
 
     })
     this.Facultyform = this.form.group({
