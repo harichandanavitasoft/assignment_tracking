@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink,RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-adminhome',
@@ -8,6 +8,10 @@ import { RouterLink,RouterOutlet } from '@angular/router';
   templateUrl: './adminhome.component.html',
   styleUrl: './adminhome.component.css'
 })
-export class AdminhomeComponent {
+export class AdminhomeComponent implements OnInit {
+  ngOnInit(): void {
+    console.log(localStorage.getItem("token"));
+  }
 
 }
+

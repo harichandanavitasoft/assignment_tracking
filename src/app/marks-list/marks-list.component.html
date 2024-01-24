@@ -1,11 +1,7 @@
-
-
-
-
-<div class="container-fluid">
+<!-- <div class="container-fluid">
   <div class="row m-5">
      <div class="col-sm-12 m-auto">
- <!-- <div class="table-responsive">
+
      <table class="table table-success table-striped table-bordered" >
          <thead>
              <tr>
@@ -23,7 +19,7 @@
          <tbody></tbody>
      </table>
  </div> -->
- <div class="table-responsive">
+ <!-- <div class="table-responsive">
  
  <table class="table table-striped shadow">
     <thead class="mb-3 ">
@@ -57,9 +53,56 @@
       </tr>
     </tbody>
   </table>
+</div> -->
+
+<div class="row">
+  <div class="col-sm-6" *ngFor="let t of data">
+
+<div class="card">
+  <div class="card-header">
+      <div class="row">
+      <div class="col-sm-3">
+      <p>HallTicketNo:</p></div>
+      <div class="col-sm-4">
+          <p>{{t.hallticketno}}</p></div>
+      </div>
+      <div class="row">
+          <div class="col-sm-3">
+          <p>Subject:</p></div>
+          <div class="col-sm-4">
+              <p>{{t.subject}}</p></div>
+          </div>
+  <div>
+      <hr>
+      
+  <div class="card-body">
+      <div class="row">
+          <div class="col-sm-3">
+              <h5 class="card-title">Question:</h5></div>
+          <div class="col-sm-9">
+              <p>{{t.question}}</p>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-sm-3">
+                  <h5 class="card-title">Answer:</h5></div>
+              <div class="col-sm-9">
+                  <p>{{t.answer}}</p>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-sm-3">
+                      <h5 class="card-title">Marks:</h5></div>
+                  <div class="col-sm-4">
+                      <p>{{t.marks}}</p>
+                      </div>
+                   </div>
+  </div>
 </div>
- </div>
 </div>
 </div>
+</div>
+</div>
+
 
 

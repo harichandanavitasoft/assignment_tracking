@@ -1,5 +1,5 @@
 
-<div class="container-fluid">
+<!-- <div class="container-fluid">
          <div class="row m-5">
             <div class="m-auto">
         <div class="table-responsive">
@@ -44,5 +44,91 @@
        
         </div>
         </div>
-    </div>
+    </div> -->
+    <div class="container-fluid">
+      <div class="row">
+        
+          </div>
+          <div class="row">
+              <div class="col-sm-6" *ngFor="let f of data">
+                  <div class="card bgm shadow " >
+                 <div class="row">
+                  <div class="col-sm-4 m-auto">
+                      <div class=" bg1">
+                          <img src="" class="card-img-top rounded-circle" alt="..."></div>
+                          <hr>
+                          <div class="d-flex pt-3">
+                              
+                              <i class="bi bi-download ps-4"></i>
+  
+                          </div>
+                      </div>
+                 <div class="col-sm-7">
+                  <div class="row">
+                      <div class="col-sm-8">
+                          <h4 class="fn mb-0">{{f.fullname}}</h4>
+                          <hr>
+                      </div>
+  
+                      <div class="row ">
+                          <div class="col-sm-5">
+                              <p> Hallticketno :</p>
+                          </div>
+                          <div class="col-sm-7">
+                              <p>{{f.hallticketno}}</p>
+                          </div>
+                      </div>
+                      <div class="row ">
+                          <div class="col-sm-4">
+                              <p>Year:</p>
+                          </div>
+                          <div class="col-sm-8">
+                              <p>{{f.year}}</p>
+                          </div>
+                      </div>
+                  
+                      <div class="row">
+                          <div class="col-sm-4">
+                              <p>Branch:</p>
+                          </div>
+                          <div class="col-sm-8">
+                              <p>{{f.branch}}</p>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-sm-4">
+                              <p>Gender:</p>
+                          </div>
+                          <div class="col-sm-8">
+                              <p>{{f.gender}}</p>
+                          </div>
+                      </div>
+                     
+                      <div class="row">
+                          <div class="col-sm-4">
+                              <p>Mbl no:</p>
+                          </div>
+                          <div class="col-sm-8">
+                              <p>{{f.mobileno}}</p>
+                          </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-sm-4">
+                                  <p>Email:</p>
+                              </div>
+                              <div class="col-sm-8">
+                                  <p>{{f.email}}</p>
+                              </div>
+                              </div>
+                      </div>
+  
+                  </div>
+                 
+              </div>
+             
+          </div>
+  
+      </div>
+  </div>
+  </div>
     

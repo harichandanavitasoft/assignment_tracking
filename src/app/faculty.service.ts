@@ -25,4 +25,10 @@ export class FacultyService {
   viewstudents(){
     return this.http.get("http://localhost:5000/getstudents")
   }
+
+ edittest(data:any){
+  return this.http.put("http://localhost:5000/edittest/"+data.id,data)
+ }
+
+
 }

@@ -27,6 +27,9 @@ constructor( private api:AdminService, private form:FormBuilder,private route:Ro
   adminlogin(){
     
     this.api.adminLogin(this.AdminLoginform.value).subscribe((res:any)=>{
+      console.log(res);
+      console.log(res.token);
+      localStorage.setItem("token",res.token)
       if(res){
         alert("Login sucessful")
       }

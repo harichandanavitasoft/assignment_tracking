@@ -1,39 +1,101 @@
 
+<div class="row">
+    <div class="col-sm-6" *ngFor="let t of testdata">
 
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+        <div class="col-sm-3">
+        <p>HallTicketNo:</p></div>
+        <div class="col-sm-4">
+            <p>{{t.hallticketno}}</p></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+            <p>Subject:</p></div>
+            <div class="col-sm-4">
+                <p>{{t.subject}}</p></div>
+            </div>
+    <div>
+        <hr>
+        
+    <div class="card-body">
+        <div class="row">
+            <div class="col-sm-3">
+                <h5 class="card-title">Question:</h5></div>
+            <div class="col-sm-9">
+                <p>{{t.question}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <h5 class="card-title">Answer:</h5></div>
+                <div class="col-sm-9">
+                    <p>{{t.answer}}</p>
+                    </div>
+                 </div>
+                 <div class="row">
+                    <div class="col-sm-3">
+                        <h5 class="card-title">Marks:</h5></div>
+                    <div class="col-sm-4">
+                        <p>{{t.marks}}</p>
+                        </div>
+                     </div>
+     <button class="btn btn-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="edit(t)">Marks</button>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  
+  
+ <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Assign Marks</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      <div class="row">
+  <div class="col-sm-8  form m-auto">
+  <form   class="rounded ms-5" [formGroup]="Editform" >
+  <div class="input-group w-75 mb-3 mt-2">
+      <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-check"></i></span>
+      <input type="text" class="form-control" placeholder="HallTicketNo" aria-label="password"
+        aria-describedby="basic-addon1" formControlName="hallticketno">
+        
+      </div>
+    <div class="input-group w-75 mb-3">
+      <span class="input-group-text" id="basic-addon1"><i class="bi bi-journal-richtext"></i></span>
+      <input type="text" class="form-control" placeholder="Subject" aria-label="password"
+        aria-describedby="basic-addon1" formControlName="subject">
+        </div>
+         <div class="input-group w-75 mb-3">
+      <span class="input-group-text" id="basic-addon1"><i class="bi bi-journal-richtext"></i></span>
+      <input type="text" class="form-control" placeholder="FullName" aria-label="password"
+        aria-describedby="basic-addon1" formControlName="fullname">
+        </div>
+    <div>
+    <textarea  class="w-75 rounded  form-control mb-3" placeholder=" Question:" formControlName="question"></textarea>
+  </div>
+  <div>
+    <textarea  class="w-75 rounded  form-control mb-3" placeholder="Answer:" formControlName="answer"></textarea>
+  </div>
+  <div class="input-group w-75 mb-3">
+    <span class="input-group-text" id="basic-addon1"><i class="bi bi-calculator-fill"></i>
+    </span>
+    <input type="number" class="form-control" placeholder="Marks" aria-label="password"
+      aria-describedby="basic-addon1" formControlName="marks">
+      </div>
+    </form>
 
-<div class="container-fluid">
-    <div class="row m-5">
-       <div class="col-sm-12 m-auto">
-   <div class="table-responsive">
-       <table class="table table-success table-striped table-bordered" >
-           <thead>
-               <tr>
-                  
-                   <th>HallTicket No</th>
-                   <th>Subject</th>
-                   <th>Question</th>
-                   <th>Answer</th>
-                   <th>Marks</th>
-                   <th>Action</th>
-                   
-               </tr>
-           </thead>
-           <tbody>
-            <tr  *ngFor="let t of testdata">
-            <th>{{t.hallticketno}}</th>
-            <th>HallTicket No</th>
-            <th>Subject</th>
-            <th>Question</th>
-            <th>Answer</th>
-            <th>Marks</th>
-            <th>Action</th>
-        </tr>
-
-           </tbody>
-       </table>
-   </div>
-   </div>
-   </div>
+      </div>
+    </div>
+      
+        <div class="modal-footer" >
+          <button type="submit" class="btn btn-success m-auto" (click)="update()">Submit</button>
+        </div>
+      </div>
+    </div>
 </div>
-
-

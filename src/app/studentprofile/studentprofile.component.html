@@ -2,7 +2,7 @@
 <div class="row">
     <div class="col-sm-4 profile shadow">
        <img src="../../assets/images/girl.png" class="w-50 ms-4">
-       <h6 class="ps-5">Harichandana</h6>
+       <h6 class="ps-5">{{data.fullname}}</h6>
        <hr>
        <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="editprofile(data)">edit</button>
        <div class="row pt-5">
@@ -18,22 +18,17 @@
        <h4>Profile Details</h4>
        <div class="row pb-3 pt-3">
         <div class="col-sm-4">
-         Faculty Id:
+        Hallticketno
         </div>
-        <div class="col-sm-8">55</div>
+        <div class="col-sm-8">{{data.hallticketno}}</div>
        </div>
-        <div class="row pb-3">
-        <div class="col-sm-4">
-         Subject:
-        </div>
-        <div class="col-sm-8">Maths</div>
-       </div>
+       
        <div class="row ">
         <div class="col-sm-4">
          Branch:
         </div>
         <div class="col-sm-8">
-          <p>Mpc</p>
+          <p>{{data.branch}}</p>
         </div>
        </div>
        <div class="row">
@@ -41,7 +36,7 @@
          Email Id:
         </div>
         <div class="col-sm-8">
-          <p>harichandana gmail.com</p>
+          <p>{{data.email}}</p>
         </div>
        </div>
        <div class="row">
@@ -49,7 +44,7 @@
          Mobile No :
         </div>
         <div class="col-sm-8">
-          <p>9381230467</p>
+          <p>{{data.mobileno}}</p>
         </div>
        </div>
        <div class="row">
@@ -57,7 +52,7 @@
          Year:
         </div>
         <div class="col-sm-8">
-            1st
+           {{data.year}}
         </div>
        </div>
        <div class="row">
@@ -65,7 +60,7 @@
          Gender:
         </div>
         <div class="col-sm-8">
-          <p>female</p>
+          <p>{{data.gender}}</p>
         </div>
        </div>
        <div class="row">
@@ -73,7 +68,7 @@
          Address:
         </div>
         <div class="col-sm-8">
-          <p>Knr</p>
+          <p>{{data.address}}</p>
         </div>
        </div>
     </div>
