@@ -1,26 +1,21 @@
 <div class=" container-fluid">
   <div class="row header ">
-    <div class="col-sm-2 p-0 m-0 g-0 bg-dark shadow">
+    <div class="col-sm-2 p-0 m-0 g-0 bg shadow">
       <div class="sidebar">
-       
-        <img src={{data.image}} class="img-fluid w-25 rounded-circle me-1 Profile">{{data.fullname}}
+        <img src={{data.image}} class="img-fluid w-25 rounded-circle me-1">{{data.fullname}}
         <hr style="color:orangered;">
-       
-       
-     <a routerLink="viewstudents" class="p-4"><i class="bi bi-mortarboard-fill"></i>Students</a>
+       <a routerLink="viewstudents" class="p-4"><i class="bi bi-mortarboard-fill"></i>Students</a>
         <a class="p-4" routerLink="addasignments"><i class="bi bi-card-checklist"></i>Add Assignment</a>
         <a class="nav-link dropdown-toggle p-4" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           <i class="bi bi-eye-fill"></i> view</a>
         <ul class="dropdown-menu bg-dark">
           <li><a class="dropdown-item" routerLink="assignments">Assignment</a></li>
           <li><a class="dropdown-item" routerLink="answers">Student Answers</a></li>
-
         </ul>
-
-      </div>
-    </div>
-    <div class="col-sm-10 content">
-      <div class="row headbar">
+        </div>
+        </div>
+        <div class="col-sm-10 content">
+         <div class="row headbar">
         <div class="col-sm-8 mt-4">
           <h5 class="text mt-2">Assignment Tracking System</h5>
         </div>

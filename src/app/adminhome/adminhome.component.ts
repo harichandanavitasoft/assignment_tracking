@@ -10,7 +10,8 @@ import { RouterLink,RouterOutlet } from '@angular/router';
 })
 export class AdminhomeComponent implements OnInit {
   ngOnInit(): void {
-    console.log(localStorage.getItem("token"));
+   
+    
   }
 
 }

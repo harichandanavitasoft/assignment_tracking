@@ -1,12 +1,27 @@
+@media only screen and (max-width: 600px) {
+  .content{
+    height: 1900%;
+  }
+}
+.content{
+  background-color:#e7e7e7;
+  height: 800px;
+}
+
+
 .header{
   color: white;
-  background-color:black;
+  background-color:#15283c;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 .profile{
   background-color: orangered;
   
 }
+.profile1{
+  background-color: orangered;
+}
+
 .icon{
   font-size:x-large;
 
@@ -15,10 +30,7 @@
 .headbar{
   background-color:#15283c;
 }
-.content{
-  background-color:#e7e7e7;
-  height: 593px
-}
+
 .dropdown-item:hover{
   background-color:transparent;
   color:blue;

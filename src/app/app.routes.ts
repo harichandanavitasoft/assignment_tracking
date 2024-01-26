@@ -20,13 +20,18 @@ import { FacultyprofileComponent } from './facultyprofile/facultyprofile.compone
 import { StudentprofileComponent } from './studentprofile/studentprofile.component';
 import { AdminhomelandingComponent } from './adminhomelanding/adminhomelanding.component';
 import { StudenthomelandigComponent } from './studenthomelandig/studenthomelandig.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContacusComponent } from './contacus/contacus.component';
 
 export const routes: Routes = [
     {path:'',component:HomepageComponent, children:[
     {path :"",component:LandingComponent},
     {path :"adminlogin",component:AdminloginComponent},
     {path:"facultylogin",component:FacultyloginComponent},
-    {path:"studentlogin",component:StudentloginComponent}]},
+    {path:"studentlogin",component:StudentloginComponent},
+    {path:"aboutus",component:AboutusComponent},
+    {path:'contactus',component:ContacusComponent}
+]},
 
       
     {path:"adminhome",component:AdminhomeComponent ,children:[
