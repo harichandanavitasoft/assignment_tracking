@@ -30,9 +30,12 @@
     overflow: auto;
     width: 215px;
   }
-  /* .icons{
-    font-size:xx-large;
-  } */
+  .icons{
+    font-size:x-large;
+  }
+  .profile{
+    color: white;
+  }
   text{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }

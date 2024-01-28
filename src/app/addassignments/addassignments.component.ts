@@ -26,6 +26,9 @@ export class AddassignmentsComponent implements OnInit {
   }
   addassignment(){
     this.api.Addassignment(this.Assignemntform.value).subscribe((res:any)=>{
+      localStorage.setItem("asssignment",res._id)
+      console.log(res._id);
+      
     console.log(res);
 
     

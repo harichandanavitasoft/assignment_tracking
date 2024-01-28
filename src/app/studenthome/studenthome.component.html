@@ -15,18 +15,21 @@
         <div class="col-sm-8 mt-4">
           <h5 class="text mt-2">Assignment Tracking System</h5>
         </div>
-        <div class="col-sm-2  mt-4 ps-5">
-          <i class="bi bi-power" routerLink="homepage">Logout</i>
+        <div class="col-sm-2 icons mt-3 ps-5">
+          <i class="bi bi-bell-fill me-3"></i>
+          <i class="bi bi-envelope-at-fill " ></i>
         </div>
-        <div class="col-sm-2">
-          <div class="text-center">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <img src="../../assets/images/girl.png" class="" width="50%" height="50px"> <br>{{info.fullname}}</a>
+        <div class="col-sm-2 profile bg-dark">
+          <div class="text-center d-flex">
+            <!-- <img src={{data.image}} class="rounded-circle" width="50%" height="50px"> -->
+            <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="../../assets/images/girl.png" class="rounded-circle" width="40%" height="50px"> {{info.fullname}}</a>
             <ul class="dropdown-menu bg">
-              <li><a class="dropdown-item" routerLink="studentprofile">Profile</a></li>
+              <li><a class="dropdown-item" routerLink="facultyprofile">Profile</a></li>
               <li><a class="dropdown-item" routerLink="">Edit</a></li>
-              <li><a class="dropdown-item" routerLink=""></a></li>
-
+              <li><a class="dropdown-item" routerLink="facultylogin">Logout</a></li>
+          
+              
             </ul>
           </div>
         </div>

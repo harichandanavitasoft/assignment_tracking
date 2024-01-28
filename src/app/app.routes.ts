@@ -22,6 +22,7 @@ import { AdminhomelandingComponent } from './adminhomelanding/adminhomelanding.c
 import { StudenthomelandigComponent } from './studenthomelandig/studenthomelandig.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContacusComponent } from './contacus/contacus.component';
+import { FacultyhomelandigComponent } from './facultyhomelandig/facultyhomelandig.component';
 
 export const routes: Routes = [
     {path:'',component:HomepageComponent, children:[
@@ -40,6 +41,7 @@ export const routes: Routes = [
         {path:"viewstudents",component:ViewstudentsComponent}
     ]},
         {path:"facultyhome",component:FacultyhomeComponent,children:[
+            {path:"",component:FacultyhomelandigComponent},
             {path:"addasignments",component:AddassignmentsComponent}, 
             {path:"facultyprofile",component:FacultyprofileComponent},
             {path:"viewstudents",component:ViewstudentsComponent},

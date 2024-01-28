@@ -23,4 +23,5 @@ export class StudentService {
   editstudent(data:any){
     return this.http.put("http://localhost:5000/editfaculty/"+data.id,data)
   }
+ 
 }

@@ -16,13 +16,16 @@ import { log } from 'node:console';
 })
 export class StudentanswersComponent implements OnInit {
   testdata:any;
+  
   Editform!:FormGroup;
   constructor(private api:FacultyService,private form:FormBuilder){}
   ngOnInit(): void {
-  
+      let answers=localStorage.getItem("sub")
     this.api.viewanswers().subscribe((res:any)=>{
+      console.log(answers,'ufname');
+     
       console.log(res);
-      this.testdata=res;
+       this.testdata=res.filter((u:any) => u.subject == answers)
       
     })
     this.Editform=this.form.group({

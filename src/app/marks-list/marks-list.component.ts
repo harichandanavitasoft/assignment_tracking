@@ -4,6 +4,7 @@ import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterLink,RouterOutlet } from '@angular/router';
 import { FacultyService } from '../faculty.service';
 import { HttpClientModule } from '@angular/common/http';
+import { StudentService } from '../student.service';
 
 @Component({
   selector: 'app-marks-list',
@@ -16,9 +17,15 @@ export class MarksListComponent implements OnInit {
   data:any
   constructor(private api :FacultyService, private form:FormBuilder){}
   ngOnInit(): void {
-    this.api.viewanswers().subscribe((res:any)=>{
-      this.data=res;
-    })
+    
+    let markslist = localStorage.getItem('ht');
+    console.log(markslist,'uname');
+     this.api.viewanswers().subscribe((res:any)=>{
+      console.log(res);
+      this.data=res.filter((u:any) => u.hallticketno == markslist)
+
+    });
+
    
   }
 

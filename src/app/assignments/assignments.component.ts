@@ -17,9 +17,11 @@ export class AssignmentsComponent implements OnInit {
   
   constructor(private api:FacultyService,private form:FormBuilder ){}
   ngOnInit(): void {
+    let assignment=localStorage.getItem('fi')
+    console.log(assignment,'uname');
     this.api.viewassignments().subscribe((res:any)=>{
       console.log(res);
-      this.info=res;
+      this.info=res.filter((u:any) => u.facultyid == assignment)
       
     })
     

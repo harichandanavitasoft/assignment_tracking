@@ -29,6 +29,9 @@ export class TestComponent  implements OnInit {
   }
   submittest(){
     this.api.studenttest(this.testform.value).subscribe((res:any)=>{
+      localStorage.setItem("marks",res._id)
+      console.log(res._id);
+      
       console.log(res);
       
 

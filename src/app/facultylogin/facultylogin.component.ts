@@ -27,6 +27,10 @@ export class FacultyloginComponent  implements OnInit{
     this.api.facultyLogin(this.facultyloginform.value).subscribe((res:any)=>{
       console.log(res);
       localStorage.setItem("id",res._id)
+      localStorage.setItem("fi", res.facultyid)
+      localStorage.setItem("sub",res.subject)
+      console.log(res.subject);
+      
       if(res){
         alert("Login sucessful")
       }
