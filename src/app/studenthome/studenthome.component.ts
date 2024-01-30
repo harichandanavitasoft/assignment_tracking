@@ -26,6 +26,10 @@ export class StudenthomeComponent implements OnInit {
     
     
   }
-  
+  Logout(){
+   let l= localStorage.removeItem("student")
+   console.log(l);
+   
+  }
 
 }

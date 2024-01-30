@@ -13,13 +13,19 @@ import { FacultyService } from '../faculty.service';
   styleUrl: './addassignments.component.css'
 })
 export class AddassignmentsComponent implements OnInit {
-  Assignemntform!:FormGroup
+  Assignemntform!:FormGroup;
+  fid:any;
+  sub:any;
   constructor(private api:FacultyService,private form:FormBuilder,private route:Router){}
   ngOnInit(): void {
+    this.fid = localStorage.getItem("fi"),
+    this.sub = localStorage.getItem("sub"),
+
     this.Assignemntform=this.form.group({
-      facultyid:[''],
+      facultyid:this.fid,
+    
+      subject:this.sub,
       question:[''],
-      subject:['']
     })
 
     
@@ -27,6 +33,7 @@ export class AddassignmentsComponent implements OnInit {
   addassignment(){
     this.api.Addassignment(this.Assignemntform.value).subscribe((res:any)=>{
       localStorage.setItem("asssignment",res._id)
+      this.Assignemntform.reset();
       console.log(res._id);
       
     console.log(res);

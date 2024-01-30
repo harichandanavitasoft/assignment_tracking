@@ -16,15 +16,15 @@ export class AdminService {
     return this.http.post("http://localhost:5000/admin/login",data);
   }
   addFaculty(data:any){
-    return this.http.post("http://localhost:5000/faculty/create",data)
+    return this.http.post("http://localhost:5000/faculty/create",data,this.jwttoken());
   }
   viewFaculty(){
     return this.http.get("http://localhost:5000/getfaculty",this.jwttoken());
   }
   Deletefaculty(id:any){
-    return this.http.delete("http://localhost:5000/deletefaculty/"+id)
+    return this.http.delete("http://localhost:5000/deletefaculty/"+id, this.jwttoken())
   }
   Editfaculty(data:any){
-    return this.http.put("http://localhost:5000/editfaculty/"+data.id,data)
+    return this.http.put("http://localhost:5000/editfaculty/"+data.id,data,this.jwttoken())
   }
 }

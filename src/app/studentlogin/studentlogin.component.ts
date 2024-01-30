@@ -14,22 +14,31 @@ import { HttpClientModule } from '@angular/common/http';
 })
 export class StudentloginComponent implements OnInit {
   studentloginform!:FormGroup
+  passwordform!:FormGroup
+  data:any
   constructor(private api:StudentService,private form:FormBuilder,private route:Router){}
   ngOnInit(): void {
 
     this.studentloginform = this.form.group({
       hallticketno:[''],
-      password:['']
+      password:[''],
+    
 
+    })
+    this.passwordform=this.form.group({
+      email:['']
     })
    
   }
   studentlogin(){
     this.api.studentlogin(this.studentloginform.value).subscribe((res:any)=>{
       console.log(res);
-      localStorage.setItem("id",res._id)
-      localStorage.setItem("ht",res.hallticketno)
-      console.log(res.hallticketno);
+      localStorage.setItem("student",res)
+      localStorage.setItem("id",res.student._id)
+      localStorage.setItem("ht",res.student.hallticketno)
+      localStorage.setItem("stoken",res.token)
+    
+   
       
       if(res){
         alert("Login sucessful")
@@ -39,6 +48,13 @@ export class StudentloginComponent implements OnInit {
       }
       this.route.navigate(['/studenthome'])
 
+      
+    })
+  }
+  password(){
+    this.api.Password(this.passwordform.value).subscribe((res:any)=>{
+      console.log(res);
+     this.data=res;
       
     })
   }

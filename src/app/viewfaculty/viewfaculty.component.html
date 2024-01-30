@@ -185,7 +185,7 @@
                             <label><i class="bi bi-calendar-event"></i>Year:</label>
                         </div>
                         <div class="col-sm-4">
-                            <input type="date" class="w-100" formControlName="year">
+                            <input type="text" class="w-100" formControlName="year">
                         </div>
                         <div class="col-sm-3">
                             <label><i class="bi bi-award-fill"></i>Designation:</label>
@@ -205,7 +205,7 @@
                     <div class="row">
                         <div class="col-sm-7">
                             <label>Image:</label>
-                            <input type="file" class="w-50" id="file" name="file"  (change)="selectphoto($event)"   formControlName="image">
+                            <input type="file" class="w-50" id="file" name="file"   formControlName="image">
                         </div>
                     <div class="col-sm-5">
                     <button type="submit" class="btn btn-success btn-sm ">submit</button>

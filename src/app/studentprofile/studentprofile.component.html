@@ -2,9 +2,11 @@
 <div class="row">
     <div class="col-sm-4 profile shadow">
        <img src="../../assets/images/girl.png" class="w-50 ms-4">
-       <h6 class="ps-5">{{data.fullname}}</h6>
+       <h4 class="ps-5">{{data?.fullname}}</h4>
+       <h6 class="bi bi-pencil-square edit"  data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="editprofile(data)">Edit profile</h6>
+      
        <hr>
-       <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="editprofile(data)">edit</button>
+       <button class="btn btn-sm btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="editprofile(data)">edit</button>
        <div class="row pt-5">
         <div class="col-sm-6">
         <p>Hallticketno:</p>
@@ -83,7 +85,7 @@
       <form [formGroup]="Editform">
         <div class="modal-header m-auto">
             <label>HallTicket no:</label>
-            <input type="text"  formControlName="hallticketno">
+            <input type="text"  formControlName="hallticketno" readonly>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">

@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterLink,RouterOutlet } from '@angular/router';
 import { StudentService } from '../student.service';
+import { log } from 'console';
 @Component({
   selector: 'app-studentprofile',
   standalone: true,
@@ -17,7 +18,7 @@ export class StudentprofileComponent  implements OnInit{
 constructor(private api:StudentService,private form:FormBuilder){}
  ngOnInit(): void {
     let studentid=localStorage.getItem("id");
-    this.api.studentprofile(studentid).subscribe((res:any)=>{
+     this.api.studentprofile(studentid).subscribe((res:any)=>{
       this.data= res;
 
     })
@@ -61,6 +62,8 @@ constructor(private api:StudentService,private form:FormBuilder){}
   }
   updateprofile(){
     this.api.editstudent(this.Editform.value).subscribe((res:any)=>{
+      console.log(res, 'edit');
+      
       window.location.reload();
     })
 

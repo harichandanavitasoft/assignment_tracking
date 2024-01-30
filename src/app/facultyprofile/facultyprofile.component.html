@@ -7,11 +7,11 @@
      
      <h4 class="ps-5">{{data.fullname}}</h4>
     
-     
+     <hr>
      <div class="row pt-5">
       <div class="col-sm-6">
       <p>Designation:</p>
-      <button type="button" class="btn btn-info btn-sm mt-5"  data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="editprofile(data)">Edit Profile
+      <button type="button" class="btn  btn-sm mt-5 edit"   data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="editprofile(data)">Edit Profile
 
       </button>
       </div>
@@ -23,6 +23,7 @@
   </div>
   <div class="col-sm-6 ps-5 info  ">
      <h4 class="pt-2">Profile Details</h4>
+     
      <hr>
      <div class="row pb-3 pt-3">
       <div class="col-sm-4">
@@ -94,7 +95,7 @@
             <form [formGroup]="Facultyform" >
                 <div class="modal-header m-auto">
                     <label>Faculty Id:</label>
-                    <input type="text"  formControlName="facultyid">
+                    <input type="text"  formControlName="facultyid" readonly>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -146,7 +147,7 @@
                             <label><i class="bi bi-book-half"></i>Subject:</label>
                         </div>
                         <div class="col-sm-4">
-                            <input type="text" class="w-100" formControlName="subject">
+                            <input type="text" class="w-100" formControlName="subject" readonly>
                         </div>
                     </div>
                     <div class="row  m-3">

@@ -5,6 +5,7 @@ import { FacultyService } from '../faculty.service';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { log } from 'console';
+import { StudentService } from '../student.service';
 
 @Component({
   selector: 'app-facultylogin',
@@ -15,21 +16,29 @@ import { log } from 'console';
 })
 export class FacultyloginComponent  implements OnInit{
   facultyloginform!:FormGroup;
- constructor(private api:FacultyService,private form:FormBuilder,private route:Router){}
+  passwordform!:FormGroup;
+  data:any
+ constructor(private api:FacultyService, private form:FormBuilder,private route:Router){}
   ngOnInit():void{
   
     this.facultyloginform=this.form.group({
       facultyid:[''],
       password:['']
     })
+     this.passwordform=this.form.group({
+      email:['']
+
+    })
   }
+
   facultylogin(){
     this.api.facultyLogin(this.facultyloginform.value).subscribe((res:any)=>{
-      console.log(res);
-      localStorage.setItem("id",res._id)
-      localStorage.setItem("fi", res.facultyid)
-      localStorage.setItem("sub",res.subject)
-      console.log(res.subject);
+      console.log(res.token,'@@@@',res);
+      localStorage.setItem("id",res.faculty._id)
+      localStorage.setItem("fi", res.faculty.facultyid)
+      localStorage.setItem("sub",res.faculty.subject)
+      localStorage.setItem("ftoken",res.token)
+    
       
       if(res){
         alert("Login sucessful")
@@ -40,6 +49,11 @@ export class FacultyloginComponent  implements OnInit{
       this.route.navigate(['/facultyhome'])
     })
   }
-
-
+  password(){
+    this.api.Password(this.passwordform.value).subscribe((res:any)=>{
+      console.log(res);
+     this.data=res;
+      
+    })
+  }
 }

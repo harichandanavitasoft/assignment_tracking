@@ -45,22 +45,22 @@ export class ViewfacultyComponent implements OnInit {
       password: password
     })
   }
-  selectphoto(event: any) {
-    if (event.target.files && event.target.files[0]) {
-      var profile = new FileReader();
-      profile.readAsDataURL(event.target.files[0])
-      profile.onload = (event) => {
-        this.selectedphoto = event.target?.result;
+  // selectphoto(event: any) {
+  //   if (event.target.files && event.target.files[0]) {
+  //     var profile = new FileReader();
+  //     profile.readAsDataURL(event.target.files[0])
+  //     profile.onload = (event) => {
+  //       this.selectedphoto = event.target?.result;
 
-      }
-    }
-  }
+  //     }
+  //   }
+  // }
   addfaculty() {
     let facultylist = {
       ...this.Facultyform.value,
       image: this.selectedphoto
     }
-    this.api.addFaculty(facultylist).subscribe((res: any) => {
+    this.api.addFaculty(this.Facultyform.value).subscribe((res: any) => {
       window.location.reload();
     })
   }
